@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/dijkstra-draisma.css">
+    <script src="javascript/dijkstra-draisma.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ontwerpen | Maak een design</title>
+</head>
+<body>
+   <!--Nav bar-->
+   <div class="topnav" id="myTopnav">
+    <a href="https://bgdd.nl/" title="Bouwgroep Dijkstra Draisma" class="logo"><img src="images/logo.jpg"></a>
+    <div class="nav-text">
+    <a href="#"></a>
+  <a href="https://bgdd.nl/wat-we-bedenken">Wat we bedenken</a>
+    <a href="https://bgdd.nl/wat-we-doen">Wat we doen</a>
+    <a href="https://bgdd.nl/wat-we-maken">Wat we maken</a>
+    <a href="https://bgdd.nl/wie-we-zijn">Wie we zijn</a>
+    <a href="https://bgdd.nl/nieuws">Nieuws</a>
+    <a href="https://bgdd.nl/contact">Contact</a>
+  </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="onderste-nav">
+    <div class="items">
+      <a href="https://bgdd.nl/zorg">Zorg</a>
+      <a href="https://bgdd.nl/onderwijs">Onderwijs</a>
+      <a href="https://bgdd.nl/kantoren-en-bedrijfspanden">Kantoren en Bedrijfspanden</a>
+      <a href="https://bgdd.nl/woningcorporaties">Woningcorporaties</a>
+      <a href="https://bgdd.nl/sport-en-recreatie">Sport en recreatie</a>
+    </div>
+  </div>
+   <!--Filter lijst-->
+   <div class="container">
+    <h2>Grafische weergave</h2>
+   <div class="filter-lijst">
+   <h1>Filters:</h1>
+   <div class="filter-items">
+    <div class="steensoorten">
+    <h4>Steensoorten</h4>
+    <div class="checkbox-steensoorten">
+    <label for="select"></label>
+
+      <select id="steensoortenselect">
+        <option style="text-align: center;">Kies uw steensoorten...</option>
+        <option id="handvormstenen" style="text-align: center;" value="handvormsteen">Handvormstenen</option>
+        <option id="gesmoordestenen" style="text-align: center;" value="gesmoordesteen">Gesmoorde stenen</option>
+        <option id="gevelstenen" style="text-align: center;" value="gevelsteen">Gevelstenen</option>
+      </select>
+  </div>
+  </div>
+  <div class="afmetingen">
+    <h4>Steenafmetingen</h4>
+    <div class="checkbox-afmetingen">
+
+<label for="select"></label>
+
+      <select name="select" id="select">
+        <option value="" style="text-align: center;">Kies uw steenafmetingen...</option>
+        <option value="210 X 100 X 50" id="waalformaat" style="text-align: center;">Waalformaat || 210 X 100 X 50</option>
+        <option value="215 X 101 X 65" id="dikformaat" style="text-align: center;">Dikformaat || 215 X 101 X 65</option>
+        <option value="180 X 87 X 41" id="rijnformaat" style="text-align: center;">Rijnformaat || 180 X 87 X 41</option>
+        <option value="210 X 100 X 40" id="vechtformaat" style="text-align: center;">Vechtformaat || 210 X 100 X 40</option>
+        <option value="160 X 78 X 41" id="ysselformaat" style="text-align: center;">Ysselformaat || 160 X 78 X 41</option>
+        <option value="280 X 130 X 80" id="kloosterformaat" style="text-align: center;">Kloosterformaat || 280 X 130 X 80</option>
+      </select>
+
+    </div>
+  </div>
+  <div class="ramen-deuren">
+    <h4 class="ramen-deuren-heading">Ramen / Deuren</h4>
+    <div class="checkbox-ramen-deuren">
+      <label for="select"></label>
+
+      <select id="select">
+        <option style="text-align: center;">Kies uw sparingen...</option>
+        <option id="handvormstenen" style="text-align: center;" value="deur1">1 Deur</option>
+        <option id="gesmoordestenen" style="text-align: center;" value="deur2">2 Deuren</option>
+        <option id="gevelstenen" style="text-align: center;" value="raam1">1 Raam</option>
+        <option id="gevelstenen" style="text-align: center;" value="raam2">2 Ramen</option>
+        <option id="gevelstenen" style="text-align: center;" value="raam2">1 Deur || 1 Raam</option>
+        <option id="gevelstenen" style="text-align: center;" value="raam2">2 Deuren || 2 Ramen</option>
+        <option id="gevelstenen" style="text-align: center;" value="raam2">1 deur || 2 Ramen</option>
+        <option id="gevelstenen" style="text-align: center;" value="raam2">2 deuren || 1 Raam</option>
+      </select>
+    </div>
+  </div>
+  <div class="patronen">
+    <h4>Patronen</h4>
+    <div class="checkbox-patronen">
+    <label for="select"></label>
+
+      <select id="patronenselect">
+        <option style="text-align: center;">Kies uw patronen...</option>
+        <option id="handvormstenen" style="text-align: center;" value="halfsteenspatroon">Halfsteens</option>
+        <option id="gesmoordestenen" style="text-align: center;" value="tegelverbandpatroon">Tegelverband</option>
+      </select>
+    </div>
+    </div>
+  </div>
+   </div>
+   </div>
+   <!--Grafische weergave-->
+   <div class="weergave"> 
+  <canvas id="canvas" height="420" width="1100"></canvas> 
+      </div> 
+   </div>
+  </div>
+</body>
+</html>
