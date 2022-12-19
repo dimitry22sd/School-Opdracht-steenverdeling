@@ -1,0 +1,39 @@
+<form>
+    <label for="select1">Select 1:</label>
+    <select id="select1">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <br>
+    <label for="select2">Select 2:</label>
+    <select id="select2">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+  </form>
+  
+  <!-- JavaScript -->
+  <script>
+    // Get the select elements
+    var select1 = document.getElementById('select1');
+    var select2 = document.getElementById('select2');
+  
+    // Add an event listener to the select elements
+    select1.addEventListener('change', checkValues);
+    select2.addEventListener('change', checkValues);
+  
+    // Create a function to check the values of the select elements
+    function checkValues() {
+      // Get the values of the select elements
+      var value1 = select1.value;
+      var value2 = select2.value;
+  
+      // Check if both values are "option2"
+      if (value1 === 'option2' && value2 === 'option2') {
+        // Perform some action
+        console.log('Both select elements have "Option 2" selected');
+      }
+    }
+  </script>
