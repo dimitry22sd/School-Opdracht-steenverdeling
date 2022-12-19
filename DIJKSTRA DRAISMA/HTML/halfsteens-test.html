@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"> 
+
+              <canvas id="canvas" width="1000" height= "1000" border="2px solid black"></canvas> 
+        
+        </div> 
+        
+         
+        
+        <script> 
+        
+        function draw() { 
+        
+          const canvas = document.getElementById('canvas'); 
+        
+         
+        
+          if (canvas.getContext) { 
+        
+            const ctx = canvas.getContext('2d'); 
+        
+            var steenDx = 210; var steenDy = 50; var steenDz = 100;  
+        
+            var voegDx = 10; var voegDy = 10;        
+        
+            var muurDx = 3000;    var muurDy = 2000; 
+        
+            var koppenMaat = steenDz+ voegDx; 
+        
+            var lagenMaat = steenDy + voegDy; 
+        
+             
+        var laag=1;
+        
+            for (let ypos=0 ;ypos < muurDy;ypos += lagenMaat){ 
+                laag = laag + 1;
+                if (laag % 2 == 0){
+                    for (let xpos=0 ;xpos < muurDx;xpos += (2 * koppenMaat)){ 
+                       ctx.strokeRect(10 + xpos , 10 + ypos , steenDx , steenDy );
+                    }
+                }
+                else {
+                    for (let xpos=0 ;xpos < muurDx;xpos += (2 * koppenMaat)) {
+                 ctx.strokeRect(-99 + xpos , 10 + ypos , steenDx , steenDy ); 
+                    }
+                }
+               
+        
+            } 
+        
+          } 
+        
+        } 
+        
+         
+        
+        draw(); 
+        </script>
+</body>
+</html>
