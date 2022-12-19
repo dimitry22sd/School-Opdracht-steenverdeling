@@ -1,0 +1,290 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background: #ededed;
+    border: 1px solid #ededed;
+    color: #f15922;
+}
+
+/* Add a nav bar */
+.topnav {
+    background-color: #fff;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 20px;
+    border-bottom: #ededed solid 2px;
+    font-weight: 400;
+  }
+
+  .topnav a:hover, .onderste-nav a:hover {
+    color: #f15922;
+    transition: 0.3s;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    padding: 14px 17px;
+    color: #002d62;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: din-2014,sans-serif;
+  }
+
+
+
+
+  .nav-text {
+    padding-top: 20px;
+    padding-left: 1px;
+  }
+  
+  
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.logo img {
+    min-height: 45px;
+    width: 240px;
+    max-width: 70vw;
+    margin-right: 15px;
+    padding-left: 60px;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /*dropdown*/
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .onderste-nav {
+    height: 60px;
+    border-bottom: #ededed solid 2px;
+  }
+
+  .onderste-nav a {
+    float: left;
+    display: block;
+    padding: 5px 17px;
+    color: #002d62;
+    text-align: center;
+    text-decoration: none;
+    font-family: din-2014,sans-serif;
+    font-weight: 400;
+  }
+
+  .items {
+    padding: 14px 100px;
+  }
+
+  h2 {
+    top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    left: 360px;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #002d62;
+    font-family: din-2014,sans-serif;
+}
+
+  .filter-lijst {
+    position: absolute;
+    left: 30px;
+    height: 500px;
+    width: 300px;
+  }
+
+  .filter-lijst h1 {
+    position: absolute;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: din-2014,sans-serif;
+    top: 10px;
+    left: 20px;
+    font-weight: 400;
+  }
+
+  .container {
+    position: relative;
+    height: 542px;
+    width: 1535px;
+    left: 0;
+    
+    background-color: #f6f6f6;
+  }
+
+  .weergave {
+    position: absolute;
+    left: 20%;
+    top: 35%;
+  }
+
+  .filter-items {
+    position: absolute;
+    left: 20px;
+    top: 37px;
+    
+    width: 93%;
+    height: 93%;
+  }
+
+  .filter-items h4 {
+    text-transform: uppercase;
+    color: #002d62;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: din-2014,sans-serif;
+  }
+
+
+  .checkbox-steensoorten, .checkbox-afmetingen, .checkbox-ramen-deuren, .checkbox-patronen {
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    margin: 3px 3px 3px;
+}
+
+.checkbox-steensoorten {
+  top: 50px;
+  position: absolute;
+}
+
+.checkbox-afmetingen {
+  
+  top: 150px;
+  position: absolute;
+}
+
+.checkbox-ramen-deuren {
+  
+  top: 250px;
+  position: absolute;
+}
+
+.checkbox-patronen {
+  
+  top: 350px;
+  position: absolute;
+}
+/*Styling the select boxes*/
+select {
+  background-color: #002d62;
+  color: white;
+  padding: 12px;
+  width: 250px;
+  border: none;
+  font-size: 13px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.canvas-open {
+  top: 350px;
+}
+
+
+
+  /*Media queries */
+  @media screen and (max-width: 1100px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 1500px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 20px;
+      top: 105px;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    form.example input[type=text], form.example button, .onderste-nav  {
+        display: none;
+    }
+    * {
+      overflow-y: none;
+      overflow-x: none;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    #canvas {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: -7vw;
+     
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .onderste-nav .items {
+      flex-wrap: wrap;
+    }
+    body {
+      overflow-x: hidden;
+    }
+    .onderste-nav a {
+      flex: 1 0 100%;
+    }
+    .container h2 {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 7vw;
+      font-size: 30px;
+    }
+    .container {
+      width: 100%;
+    }
+    .filter-lijst {
+      position: absolute;
+      height: 500px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+        width: 100%;
+    }
+  }
